@@ -1,6 +1,6 @@
-public interface PriorityQueue {
+public interface PriorityQueue<T> {
     
-    public void add(String x);
+    public void add(T x);
 
     public boolean isEmpty();
 
