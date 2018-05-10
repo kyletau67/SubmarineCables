@@ -4,8 +4,8 @@ public interface PriorityQueue<T> {
 
     public boolean isEmpty();
 
-    public String peekMin();
+    public T peekMin();
 
-    public String removeMin();
+    public T removeMin();
 
 }
