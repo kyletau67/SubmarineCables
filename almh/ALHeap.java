@@ -17,6 +17,7 @@ public class ALHeap
    *****************************************************/
   public ALHeap() 
   { 
+	_heap = new ArrayList<Integer>();
   }
 
 
@@ -38,7 +39,8 @@ public class ALHeap
    *****************************************************/
   public boolean isEmpty()
   { 
-  }//O(?)
+	return _heap.size() == 0;
+  }//O(1)
 
 
   /*****************************************************
