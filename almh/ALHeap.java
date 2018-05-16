@@ -49,8 +49,9 @@ public class ALHeap
    * Postcondition: Heap remains unchanged.
    *****************************************************/
   public Integer peekMin()
-  { 
-  }//O(?)
+  {
+      return _heap.get(0);
+  }//O(1)
 
 
   /*****************************************************
