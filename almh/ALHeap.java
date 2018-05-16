@@ -56,22 +56,33 @@ public class ALHeap
 
   /*****************************************************
    * add(Integer) 
-   * Inserts an element in the heap
+   * Inserts an element in the heap at first place where it is found to be less than the next element
+   * Rest of elements get shifted right
    * Postcondition: Tree exhibits heap property.
    *****************************************************/
   public void add( Integer addVal )
   { 
-  }//O(?)
+	for(int i = 0; i < _heap.size(); i++){
+		if(addVal < _heap.get(i)){
+			_heap.add(i, addVal);
+			return;
+		}
+	} 
+	_heap.add(addVal);
+  }//O(n)
 
 
   /*****************************************************
    * removeMin()  ---  means of removing an element from heap
-   * Removes and returns least element in heap.
+   * Removes and returns least element in heap, which we made as the 0th element
    * Postcondition: Tree maintains heap property.
    *****************************************************/
   public Integer removeMin()
   { 
-  }//O(?)
+	Integer retVal = _heap.get(0);
+	_heap.remove(0);
+	return retVal;
+  }//O(1)
 
 
   /*****************************************************
