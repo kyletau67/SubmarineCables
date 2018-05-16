@@ -29,8 +29,12 @@ public class ALHeap
    * b) ASCII representation of the tree (more complicated, more fun)
    *****************************************************/
   public String toString() 
-  { 
-  }//O(?)
+  {
+      String ret = "";
+      for(Integer i: _heap)
+	  ret += i + " ";
+      return ret;
+  }//O(n)
 
 
   /*****************************************************
@@ -92,8 +96,14 @@ public class ALHeap
    * Postcondition: Tree unchanged
    *****************************************************/
   private int minChildPos( int pos )
-  { 
-  }//O(?)
+  {
+      int leftC = 2*pos + 1;
+      int rightC = 2*pos + 2;
+      if(_heap.get(leftC) == minOf(_heap.get(leftC), _heap.get(rightC)))
+	  return leftC;
+      return rightC;
+      
+  }//O(1)
   
 
   //************ aux helper fxns ***************
