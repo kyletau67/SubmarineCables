@@ -1,5 +1,18 @@
 import java.util.NoSuchElementException;
 
+/* RunMed
+To find Median:
+   If both Heaps are the same size, avg them.
+   Else: give the root of the larger heap.
+
+To Add:
+   If new int is <= current med, add it to maxHeap lilVals.
+   If new int is > current med, add it to minHeap bigVals.
+
+   If the heaps size differs by more than 1, redistribute the max 
+   vals of lilVals into bigVals.
+*/
+
 public class RunMed {
     //inst vars
     ALHeapMax lilVals;
@@ -24,6 +37,7 @@ public class RunMed {
 		return bigVals.peekMin(); }
 	}
     }
+    
     public void add(int addend) {
 
 	//Compare the addend to the current median and place it into its repective heap:
